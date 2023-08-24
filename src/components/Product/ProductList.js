@@ -49,11 +49,6 @@ export const ProductList = () => {
       const existingCartItem = cart.find(item => item.id === product.id);
 
 
-
-
-
-
-
       if (existingCartItem) {
 
 

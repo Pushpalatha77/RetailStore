@@ -52,8 +52,8 @@ export default function Profile() {
 
     useEffect(() => {
         const loginCredentials = {
-            userName: "SWEETY",
-            userPassword: "Sweety@123",
+            userName: "PUSHPA",
+            userPassword: "Push147@",
         };
 
         // // Fetch user data from the mock database

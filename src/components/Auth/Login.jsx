@@ -24,8 +24,8 @@ export default function LoginForm() {
 
   const registeredUsers = [
     {
-      userName: "SWEETY",
-      userPassword: "Sweety@123",
+      userName: "PUSHPA",
+      userPassword: "Push147@",
     },
     {
       userName: "ADMIN",
