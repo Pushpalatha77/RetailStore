@@ -1,0 +1,185 @@
+{
+  "productstype": [
+    {
+      "name": "Electronic Gadgets",
+      "id": 1
+    },
+    {
+      "name": "Footwear",
+      "id": 2
+    },
+    {
+      "name": "Clothing",
+      "id": 3
+    },
+    {
+      "name": "Cosmetics",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "name": "Laptop",
+      "price": "50000",
+      "productType": "Electronic Gadgets",
+      "id": 7
+    },
+    {
+      "name": "Jeans",
+      "price": "1000",
+      "productType": "Clothing",
+      "id": 5
+    },
+    {
+      "name": "Tablet",
+      "price": "15000",
+      "productType": "Electronics",
+      "id": 10
+    },
+    {
+      "name": "TV",
+      "price": "50000",
+      "productType": "Electronics",
+      "id": 20
+    }
+  ],
+  "orderedProducts": [
+    {
+      "cart": [
+        {
+          "name": "Laptop",
+          "price": "50000",
+          "productType": "Electronic Gadgets",
+          "id": 7,
+          "quantity": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "cart": [
+        {
+          "name": "Laptop",
+          "price": "50000",
+          "productType": "Electronic Gadgets",
+          "id": 7,
+          "quantity": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "cart": [
+        {
+          "name": "TV",
+          "price": "50000",
+          "productType": "Electronics",
+          "id": 20,
+          "quantity": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "cart": [
+        {
+          "name": "Laptop",
+          "price": "50000",
+          "productType": "Electronic Gadgets",
+          "id": 7,
+          "quantity": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "cart": [
+        {
+          "name": "Jeans",
+          "price": "1000",
+          "productType": "Clothing",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "id": 5
+    },
+    {
+      "cart": [
+        {
+          "name": "Laptop",
+          "price": "50000",
+          "productType": "Electronic Gadgets",
+          "id": 7,
+          "quantity": 1
+        }
+      ],
+      "id": 6
+    }
+  ],
+  "register": [
+    {
+      "userName": "SOUJI",
+      "userPassword": "Souji@123",
+      "customerName": "Gourishetty Soujanya",
+      "mobileNo": "9302836844",
+      "email": "souji@gmail.com",
+      "buildingNo": "H-no 1-125",
+      "areaName": "Badsi",
+      "city": "Nizamabad",
+      "state": "Telangana",
+      "zip": "503230",
+      "id": 1
+    },
+    {
+      "userName": "SWEETY",
+      "userPassword": "Sweety@123",
+      "customerName": "Sweety",
+      "mobileNo": "9956091356",
+      "email": "sweety@gmail.com",
+      "buildingNo": "50",
+      "areaName": "Macha Bolarum",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zip": "500010",
+      "id": 2
+    }
+  ],
+  "generate-invoice": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ],
+  "wishlist-products": [
+    {
+      "name": "Jeans",
+      "price": "1000",
+      "productType": "Clothing",
+      "id": 5
+    },
+    {
+      "name": "Laptop",
+      "price": "50000",
+      "productType": "Electronic Gadgets",
+      "id": 7
+    },
+    {
+      "name": "Tablet",
+      "price": "15000",
+      "productType": "Electronics",
+      "id": 10
+    }
+  ]
+}

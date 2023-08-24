@@ -1,0 +1,44 @@
+/* AddProductType.css */
+.add-product-type-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffdd003e; /* Set the background color to blue */
+  }
+   
+  .add-product-type-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; 
+  }
+  
+  .add-product-type-form input[type="text"],
+  .add-product-type-form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+  }
+   
+  .add-product-type-form span {
+    color: red;
+    font-size: 14px;
+  }
+   
+  .add-product-type-form input[type="submit"] {
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+ 
+  .add-product-type-form input[type="submit"]:hover {  
+    background-color: #00b383;
+  }
+  
+   

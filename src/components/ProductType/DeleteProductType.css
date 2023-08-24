@@ -1,0 +1,42 @@
+/* DeleteProductType.css */
+.delete-product-type-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.delete-product-type-container h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.delete-product-type-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.delete-product-type-container input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+}
+
+.delete-product-type-container button {
+    background-color: #ff5c5c;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.delete-product-type-container button:hover {
+    background-color: #e04949;
+}
+
+ 

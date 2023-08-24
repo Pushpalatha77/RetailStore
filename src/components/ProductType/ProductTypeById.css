@@ -1,0 +1,41 @@
+.product-type-by-id-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffdd003e; /* Set the background color to blue */
+  }
+
+  .product-type-by-id-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .product-type-by-id form input[type="text"],
+  .product-type-by-id form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+  }
+
+  .product-type-by-id-form span {
+    color: red;
+    font-size: 14px;
+  }
+
+  .product-type-by-id-form input[type="submit"] {
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .product-type-by-id-form input[type="submit"]:hover {
+    background-color: #00b383;
+  }
