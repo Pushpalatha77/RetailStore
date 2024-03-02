@@ -1,8 +1,11 @@
 import React from 'react';
 import './AdminDashboard.css'
 import { Link } from 'react-router-dom';
+import AdminNavbar from './AdminNavbar';
 const AdminDashboard = () => {
     return (
+       <div>
+        <AdminNavbar/>
         <div className="container">
 
             <h2 >Admin Dashboard</h2>
@@ -33,6 +36,7 @@ const AdminDashboard = () => {
 
             </div >
 
+        </div>
         </div>
     );
 

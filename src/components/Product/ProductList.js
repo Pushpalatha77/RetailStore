@@ -6,6 +6,7 @@ import {
   MDBContainer,
   MDBRow,
   MDBCol,
+  MDBRipple, MDBCardImage,
   MDBBtn,
   MDBIcon,
   MDBTypography,
@@ -19,6 +20,9 @@ import Navbar from '../common/Navbar';
 import Footer from '../common/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
+import TV from "../assets/images/tv.jpg";
+import jeans from "../assets/images/jeans.jpg"
+import TAB from "../assets/images/tab.jpg"
 
 export const ProductList = () => {
   const productsContext = useContext(ProductContext);
@@ -29,6 +33,19 @@ export const ProductList = () => {
   const [invoiceGenerated, setInvoiceGenerated] = useState(false);
   const [basicModal, setBasicModal] = useState(false);
   const toggleShow = () => setBasicModal(!basicModal);
+  // const productImages = {
+  //  TV:TV,
+  //  Tab:TAB,
+  //  Jeans:jeans,
+  //  Laptop:laptop,
+  // };
+  
+ 
+   // const img = prod.image.replace(/\s+/g, "");
+    //const prodImg = productImages[img];
+    const defaultImg =
+      "https://www.wellplannedjourney.com/wp-content/uploads/Best-Outdoor-Products-Amazon.jpg";
+    
   const navigate = useNavigate();
   const addToCart = (product) => {
     if (orderPlaced) {
@@ -36,11 +53,7 @@ export const ProductList = () => {
       // If an order is already placed, start a new cart with the current product
       setCart([{ ...product, quantity: 1 }]);
       setOrderPlaced(false); // Reset orderPlaced status
-      setInvoiceGenerated(false); // Reset invoice generation statusx
-
-
-
-
+      setInvoiceGenerated(false); // Reset invoice generation status
 
     } else {
 
@@ -243,37 +256,62 @@ export const ProductList = () => {
     <div>
       <Navbar />
       <h2>Product List</h2>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>ProductType</th>
-            <th>Id</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div className="row">     
+      
           {products.map(product => (
-            <tr key={product.id} className="product-row">
-              <td>{product.name}</td>
-              <td>{product.price}</td>
-              <td>{product.productType}</td>
-              <td>{product.id}</td>
-              <td>
-                <button className="btn btn-primary" onClick={() => addToCart(product)}>
-                  Add to Cart
-                </button>
-              </td>
-              <td>
-                <button className="btn btn-primary" onClick={() => addToWishlist(product)}>
-                  Add to WishList
-                </button>
-              </td>
-            </tr>
+            <div key={product.id} className="product-row">
+            
+          {/* Integrate MDBCard here */}
+          <MDBCard style={{ backgroundColor: "#fcffeb" }} className="shadow-0 border rounded-3">
+            <MDBCardBody>
+              <MDBRow>
+              <MDBCol md="12" lg="3" className="mb-4 mb-lg-0">
+        <MDBRipple rippleColor="dark" rippleTag="div" className="bg-image rounded hover-zoom hover-overlay">
+          <MDBCardImage src={product.image? product.image : defaultImg} fluid className="w-100" />
+        </MDBRipple>
+      </MDBCol>
+                <MDBCol md="6">
+                  <h5>{product.brand} {product.name}</h5>
+                  <div className="d-flex flex-row">
+							<span>9999</span>              
+						</div>
+            <h5>retailstore.com</h5>
+                  <div className="mt-1 mb-0 text-muted small">
+                    <span>{product.colour}</span>
+                    <span className="text-primary"> • </span>
+                    <span>{product.productType}</span>
+                    <span className="text-primary"></span>
+                    <span>{product.category}<br /></span>
+                  </div>
+                  <div className="mb-2 text-muted small">
+                    <span>Unique design</span>
+                    <span className="text-primary"> • </span>
+                    <span>Best Quality</span>
+                    <span className="text-primary"> • </span>
+                    <span>Very Durable<br /></span>
+                  </div>
+                </MDBCol>
+                <MDBCol md="6" lg="3" className="border-sm-start-none border-start">
+                  <div className="d-flex flex-row align-items-center mb-1">
+                    <h4 className="mb-1 me-1">₹{product.price}</h4>
+                    <span className="text-danger">
+                      <s>₹{(product.price * 1.1).toFixed(2)}</s>
+                    </span>
+                  </div>
+                  <h6 className="text-success">Free shipping</h6>
+                  <div className="d-flex flex-column mt-4">
+                    <MDBBtn onClick={() => addToCart(product)} color="success" size="sm">Add to Cart</MDBBtn>
+                    <MDBBtn onClick={() => addToWishlist(product)} outline color="success" size="sm" className="mt-2">Add to wish list</MDBBtn>
+                  </div>
+                </MDBCol>
+                <br></br>
+              </MDBRow>
+            </MDBCardBody>
+          </MDBCard>
+        </div>
           ))}
-        </tbody>
-      </table>
+         </div>
+       
       <br /><br />
       <div className="card">
 

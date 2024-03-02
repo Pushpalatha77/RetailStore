@@ -4,10 +4,12 @@ import axios from 'axios';
 import { ProductContext } from '../../context/ProductContext';
 import { useNavigate } from 'react-router-dom';
 export const AddProduct = () => {
+  const [count,setCount]=useState(0);
   const { register, handleSubmit, formState: { errors } } = useForm();
   const products = useContext(ProductContext);
   const [productTypes, setProductTypes] = useState([]);
   const navigate= useNavigate();
+  const increment=()=>setCount(count+1);
 
   useEffect(() => {
     axios.get("http://localhost:2000/productstype")
@@ -57,8 +59,12 @@ export const AddProduct = () => {
           <span>Product Type is required</span>
         )}
         <br /><br />
+        
         <input type="submit" value="Add Product" />
       </form>
+      <div>the count value is {count}
+      <button onClick={increment}>Increment</button></div>
+      
     </div>
   );
 }

@@ -16,6 +16,7 @@ import AdminDashboard from './components/Product/AdminDashboard';
 import { Product } from './components/Product';
 import { AddProduct } from './components/Product/AddProduct';
 import { ViewAllProducts } from './components/Product/ViewAllProducts';
+import AdminNavbar from './components/Product/AdminNavbar';
 
 function App() {
  
@@ -38,6 +39,7 @@ function App() {
           <Route path="/product" element={<Product/>}></Route>
           <Route path="/productType" element={<ProductType/>}></Route>
           <Route path="/viewproducts" element={<ViewAllProducts/>}></Route>
+          <Route path="/adminlogin" element={<AdminNavbar/>}></Route>
          
         </Routes>
       </Router>
